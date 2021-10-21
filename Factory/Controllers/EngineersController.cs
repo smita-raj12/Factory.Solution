@@ -37,5 +37,13 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    public ActionResult Details(int id)
+    {
+      var thisEngineer = _db.Engineers
+          .Include(Engineer => Engineer.JoinEntities)
+          .ThenInclude(join => join.Machine)
+          .FirstOrDefault(Engineer => Engineer.EngineerId == id);
+      return View(thisEngineer);
+    }
   }
 }    
