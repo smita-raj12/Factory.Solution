@@ -11,10 +11,10 @@
 else
 {
   <h4>engineer the Machine contains:</h4>
-  <ul>
+  
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Engineer.Name</li>
+    @join.Engineer.Name
     @using (Html.BeginForm("DeleteEngineer", "Machines"))
     {
       <div class="container">
@@ -23,7 +23,7 @@ else
       </div>  
     }
   }
-  </ul>
+  
 }
 <p>@Html.ActionLink("Add a Engineer", "AddEngineer", new { id = Model.MachineId })</p>
 <p>@Html.ActionLink("Back to Machine", "Index")</p>

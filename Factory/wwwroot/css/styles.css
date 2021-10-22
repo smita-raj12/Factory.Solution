@@ -16,6 +16,17 @@ body,html
   text-align: center;
 }
 
+div#footer 
+{
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:rgb(29, 28, 27);
+  background:rgb(179, 207, 207);
+  padding:8px;
+}
+
 h1
 {
   padding-top: 30px;
