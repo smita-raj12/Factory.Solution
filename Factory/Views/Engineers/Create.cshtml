@@ -6,9 +6,9 @@
 {
   <div class="container">
     @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "text", type = "text", required = "required" })
     @Html.LabelFor(model => model.JoinDate)
-    @Html.TextBoxFor(model => model.JoinDate)
+    @Html.TextBoxFor(model => model.JoinDate, new { @class = "text", type = "text", required = "required" })
 
     @Html.Label("Select Machine")
     @Html.DropDownList("MachineId")

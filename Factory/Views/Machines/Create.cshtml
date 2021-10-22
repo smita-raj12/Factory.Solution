@@ -5,7 +5,7 @@
 {
   <div class="container">
     @Html.LabelFor(model => model.MachineType)
-    @Html.TextBoxFor(model => model.MachineType)
+    @Html.TextBoxFor(model => model.MachineType, new { @class = "text", type = "text", required = "required" })
   
     <input type="submit" value="Add new Machine" />
   </div>  
