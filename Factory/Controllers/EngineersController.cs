@@ -28,12 +28,12 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Create(Engineer engineer, int MachineId)
     {
-      _db.Engineers.Add(engineer);
-      _db.SaveChanges();
-      if (MachineId != 0)
-      {
-        _db.MachineEngineer.Add(new MachineEngineer() { MachineId = MachineId, EngineerId = engineer.EngineerId });
-      }
+        _db.Engineers.Add(engineer);
+        _db.SaveChanges();
+        if (MachineId != 0)
+        {
+          _db.MachineEngineer.Add(new MachineEngineer() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+        }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
@@ -75,13 +75,16 @@ namespace Factory.Controllers
     {
       if (MachineId != 0)
       {
-      _db.MachineEngineer.Add(new MachineEngineer() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+        if (_db.MachineEngineer.Any(dp => dp.MachineId == MachineId && dp.EngineerId == engineer.EngineerId) == false)
+        {
+          _db.MachineEngineer.Add(new MachineEngineer() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+        }
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
-     public ActionResult Delete(int id)
+    public ActionResult Delete(int id)
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
