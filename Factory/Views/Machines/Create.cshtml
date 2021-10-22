@@ -5,8 +5,12 @@
 {
   <div class="container">
     @Html.LabelFor(model => model.MachineType)
-    @Html.TextBoxFor(model => model.MachineType, new { @class = "text", type = "text", required = "required" })
-  
+    @Html.TextBoxFor(model => model.MachineType, new { @class = "text", type = "text", required = "required" })<br />
+    @Html.LabelFor(model => model.Operational)<br/>
+    Yes
+    @Html.RadioButtonFor(m => m.Operational,"Yes")<br/>
+    No
+    @Html.RadioButtonFor(m => m.Operational,"No")<br/>
     <input type="submit" value="Add new Machine" />
   </div>  
 }
