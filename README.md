@@ -42,7 +42,7 @@ User Stories:-
 3. Open git BASH terminal and navigate to the Factory folder, within the directory
 Run `dotnet restore` in the git BASH terminal to install dependencies. 
 
-4. Create Migrations(run command `dotnet ef migrations add Initial`) on your terminal.
+4. Create Migrations (run command `dotnet ef migrations add Initial` on your terminal).
 
 5. Run `dotnet ef database update` to create database.
 
