@@ -39,12 +39,14 @@ User Stories:-
 
 2. Download any Code Editor for your choice. (Here I used VSCode).
 
-3. Open git BASH terminal and navigate to the HairSalon folder, within the directory
+3. Open git BASH terminal and navigate to the Factory folder, within the directory
 Run `dotnet restore` in the git BASH terminal to install dependencies. 
 
-4. Create your own version of the database by importing the smitarajpurohit.sql file from the repo with MySQL Workbench.
+4. Create Migrations(run command `dotnet ef migrations add Initial`) on your terminal.
 
-5. Create appsettings.json file in the HairSalon directory of HairSalon.Solution (run the command touch appsettings.json) and add the following code to the file: appsettings.json
+5. Run `dotnet ef database update` to create database.
+
+6. Create appsettings.json file in the Factory directory of Factory.Solution (run the command touch appsettings.json) and add the following code to the file: appsettings.json
 
       
         {                                                    
