@@ -11,6 +11,9 @@
     @Html.RadioButtonFor(m => m.Operational,"Yes")<br/>
     No
     @Html.RadioButtonFor(m => m.Operational,"No")<br/>
+    @Html.LabelFor(model => model.InspectionDate)
+    @Html.TextBoxFor(model => model.InspectionDate, new { @class = "text", type = "text", required = "required" })<br />
+    
     <input type="submit" value="Add new Machine" />
   </div>  
 }
