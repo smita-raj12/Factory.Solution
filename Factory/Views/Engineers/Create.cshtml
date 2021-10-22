@@ -4,17 +4,21 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-  @Html.LabelFor(model => model.JoinDate)
-  @Html.TextBoxFor(model => model.JoinDate)
+  <div class="container">
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.JoinDate)
+    @Html.TextBoxFor(model => model.JoinDate)
 
-  @Html.Label("Select Machine")
-  @Html.DropDownList("MachineId")
+    @Html.Label("Select Machine")
+    @Html.DropDownList("MachineId")
 
-  <input type="submit" value="Add new Engineer" class="btn btn-default" />
+    <input type="submit" value="Add new Engineer" class="btn btn-default" />
+  </div>
 }
 <p>@Html.ActionLink("Show all Engineers", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
 @{
   Layout = "_Layout";
 }

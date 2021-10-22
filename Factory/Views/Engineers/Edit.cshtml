@@ -7,19 +7,22 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.EngineerId)
+  <div class="container">
+    @Html.HiddenFor(model => model.EngineerId)
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
   
-  @Html.LabelFor(model => model.JoinDate)
-  @Html.EditorFor(model => model.JoinDate)
+    @Html.LabelFor(model => model.JoinDate)
+    @Html.EditorFor(model => model.JoinDate)
 
-  @Html.Label("Select Machine")
-  @Html.DropDownList("MachineId")
+    @Html.Label("Select Machine")
+    @Html.DropDownList("MachineId")
 
-  <input type="submit" value="Save" />
+    <input type="submit" value="Save" />
+  </div>  
 }
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
 @{

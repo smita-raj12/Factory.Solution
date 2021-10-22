@@ -6,14 +6,18 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.MachineId)
+  <div class="container">
+    @Html.HiddenFor(model => model.MachineId)
 
-  @Html.LabelFor(model => model.MachineType)
-  @Html.EditorFor(model => model.MachineType)
+    @Html.LabelFor(model => model.MachineType)
+    @Html.EditorFor(model => model.MachineType)
   
-  <input type="submit" value="Save" />
+    <input type="submit" value="Save" />
+  </div>  
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
 @{
   Layout = "_Layout";
 }

@@ -7,15 +7,19 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.MachineId)
+  <div class="container">
+    @Html.HiddenFor(model => model.MachineId)
 
-  @Html.Label("Select Engineer")
-  @Html.DropDownList("EngineerId")
+    @Html.Label("Select Engineer")
+    @Html.DropDownList("EngineerId")
 
-  <input type="submit" value="Save" />
+    <input type="submit" value="Save" />
+  </div>  
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
 @{
   Layout = "_Layout";
 }

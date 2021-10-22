@@ -5,9 +5,13 @@
 @Html.DisplayNameFor(model => model.MachineType): @Html.DisplayFor(model => model.MachineType)
 @using (Html.BeginForm())
 {
-  <input type="submit" value="Remove" />
+  <div class="container">
+    <input type="submit" value="Remove" />
+  </div>  
 }
 @Html.ActionLink("Back to List", "Index")
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
 @{
   Layout = "_Layout";
 }

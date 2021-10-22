@@ -5,8 +5,12 @@
 @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
 @using (Html.BeginForm())
 {
-  <input type="submit" value="Delete" />
+  <div class="container">
+    <input type="submit" value="Delete" />
+  </div>
 }
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
 @Html.ActionLink("Back to List", "Index")
 @{
   Layout = "_Layout";

@@ -31,19 +31,13 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Create(Machine machine, int EngineerId)
     {
-      List<Machine> MachinesList = _db.Machines.ToList();
-      foreach(Machine m in MachinesList)
-      {
-        if(machine.MachineType != m.MachineType)
-        {
           _db.Machines.Add(machine);
           _db.SaveChanges();
           if (EngineerId != 0)
           {
             _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = EngineerId, MachineId = machine.MachineId });
           } 
-        }  
-      }     
+      
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

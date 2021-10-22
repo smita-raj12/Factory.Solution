@@ -3,12 +3,16 @@
 <h4>Add a new Machine</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.MachineType)
-  @Html.TextBoxFor(model => model.MachineType)
+  <div class="container">
+    @Html.LabelFor(model => model.MachineType)
+    @Html.TextBoxFor(model => model.MachineType)
   
-  <input type="submit" value="Add new Machine" />
+    <input type="submit" value="Add new Machine" />
+  </div>  
 }
 <p>@Html.ActionLink("Show all Machines", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
 @{
   Layout = "_Layout";
 }
