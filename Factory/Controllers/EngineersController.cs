@@ -15,10 +15,12 @@ namespace Factory.Controllers
     {
       _db = db;
     }
+
     public ActionResult Index()
     {
       return View(_db.Engineers.ToList());
     }
+
     public ActionResult Create()
     {
       ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineType");
@@ -37,6 +39,7 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
     public ActionResult Details(int id)
     {
       var thisEngineer = _db.Engineers
@@ -45,6 +48,7 @@ namespace Factory.Controllers
           .FirstOrDefault(Engineer => Engineer.EngineerId == id);
       return View(thisEngineer);
     }
+
     public ActionResult Edit(int id)
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
@@ -63,6 +67,7 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
     public ActionResult AddMachine(int id)
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
@@ -98,6 +103,7 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    
     [HttpPost]
     public ActionResult DeleteMachine(int joinId)
     {
