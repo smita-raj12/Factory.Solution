@@ -1,10 +1,10 @@
 @model Factory.Models.Engineer
 
-<h2>Engineer Details</h2>
+<h4>Engineer Details</h4>
 <hr />
-<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
-<h4>@Html.DisplayNameFor(model => model.JoinDate): @Html.DisplayFor(model => model.JoinDate)</h4>
-<h4>@Html.DisplayNameFor(model => model.Active): @Html.DisplayFor(model => model.Active)</h4>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.JoinDate): @Html.DisplayFor(model => model.JoinDate)</h3>
+<h3>@Html.DisplayNameFor(model => model.Active): @Html.DisplayFor(model => model.Active)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {
