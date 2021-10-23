@@ -1,6 +1,6 @@
 # Dr. Sillystringz's Factory
 
-The factory of the famous Dr. Sillystringz to build an application to keep track of their machine repairs. This MVC web application is to manage their engineers, and the machines they are licensed to fix. The factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There should be a many-to-many relationship between Engineers and Machines. An engineer can be licensed to repair (belong to) many machines (such as the Dreamweaver, the Bubblewrappinator, and the Laughbox) and a machine can have many engineers licensed to repair it.
+This MVC Web application is for a factory of the famous Dr. Sillystringz to keep track of their machine repairs. This MVC web application is to manage their engineers, and the machines they are licensed to fix. The factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There should be a many-to-many relationship between Engineers and Machines. An engineer can be licensed to repair (belong to) many machines (such as the Dreamweaver, the Bubblewrappinator, and the Laughbox) and a machine can have many engineers licensed to repair it.
 
 User Stories:-
 
@@ -42,7 +42,7 @@ User Stories:-
 3. Open git BASH terminal and navigate to the Factory folder, within the directory
 Run `dotnet restore` in the git BASH terminal to install dependencies. 
 
-4. Create Migrations (run command `dotnet ef migrations add Initial` on your terminal).
+4. Create Migrations (run command `dotnet ef migrations add Initial` on your terminal and make sure you have installed MySQL Workbench).
 
 5. Run `dotnet ef database update` to create database.
 
